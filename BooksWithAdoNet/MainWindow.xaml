@@ -1,0 +1,49 @@
+﻿<Window x:Class="BooksWithAdoNet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="BookBD" Height="450" Width="769.153">
+    <StackPanel 
+        Background="Ivory"
+            x:Name="Panel" Height="419" VerticalAlignment="Bottom">
+        <TextBox 
+            Name="TB"
+            Foreground="Black"
+            FontSize="20"
+            Margin="10,20,100,0" Height="36"
+            >
+        </TextBox>
+        <!--<Button
+            x:Name="Bot2"
+            Margin="60,6,0,0"
+            Width="78"
+            FontSize="20"
+            FontStyle="Italic"
+            Height="35"
+            Content="Add"
+            Background="White" Click="Button_Add">
+        </Button>-->
+        <Button
+            Margin="660,-38,0,0"
+            Width="78"
+            FontSize="20"
+            FontStyle="Italic"
+            Content="Start"
+            Height="35"
+            Background="White" Click="Button_Click">
+        </Button>
+        <DataGrid 
+        x:Name ="DataGrid"
+            Margin = "0,0,0,0"
+            Background="AntiqueWhite"
+            Foreground="Black" 
+            AutoGenerateColumns="True" 
+            IsSynchronizedWithCurrentItem="True" 
+            Opacity="0.5" 
+            Height="361" 
+            RenderTransformOrigin="0.501,-0.993">
+        </DataGrid>
+    </StackPanel>
+</Window>
