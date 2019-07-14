@@ -24,9 +24,21 @@ namespace BooksWithAdoNet
     {
         public MainWindow() => InitializeComponent();
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    DataTable dt = SqlManeger.Execute(TB.Text);
+        //    DataGrid.ItemsSource = dt.DefaultView;
+        //}
+        private void FullView_Click(object sender, RoutedEventArgs e)
         {
-            DataTable dt = SqlManeger.Execute(TB.Text);
+            ClassicView1.IsChecked = false;
+                DataTable dt = SqlManeger.Execute("Select * FROM FullView");
+                DataGrid.ItemsSource = dt.DefaultView;
+        }
+        private void ClassicView_Click(object sender, RoutedEventArgs e)
+        {
+            FullView1.IsChecked = false;
+            DataTable dt = SqlManeger.Execute("Select * FROM ClassicView");
             DataGrid.ItemsSource = dt.DefaultView;
         }
     }
