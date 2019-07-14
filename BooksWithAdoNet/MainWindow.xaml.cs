@@ -32,14 +32,42 @@ namespace BooksWithAdoNet
         private void FullView_Click(object sender, RoutedEventArgs e)
         {
             ClassicView1.IsChecked = false;
-                DataTable dt = SqlManeger.Execute("Select * FROM FullView");
-                DataGrid.ItemsSource = dt.DefaultView;
+            DataTable dt = SqlManeger.Execute("Select * FROM FullView");
+            DataGrid.ItemsSource = dt.DefaultView;
         }
         private void ClassicView_Click(object sender, RoutedEventArgs e)
         {
             FullView1.IsChecked = false;
             DataTable dt = SqlManeger.Execute("Select * FROM ClassicView");
             DataGrid.ItemsSource = dt.DefaultView;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            FullView1.IsChecked = true;
+            ClassicView1.IsChecked = true;
+            string query = $"{ComboBox1.Text} {TextBox1.Text} {TextBlock.Text} {TextBox2.Text};";
+            DataTable dt = SqlManeger.Execute(query);
+            DataGrid.ItemsSource = dt.DefaultView;
+        }
+        private void ComboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBoxItem currentItem = ((ComboBoxItem)ComboBox1.SelectedItem);
+            switch (currentItem.Content)
+            {
+                case "SELECT":
+                    TextBlock.Text = "FROM";
+                    break;
+                case "INSERT INTO":
+                    TextBlock.Text = "VALUES";
+                    break;
+                case "UPDATE":
+                    TextBlock.Text = "SET";
+                    break;
+                case "DELATE FROM":
+                    TextBlock.Text = "WHERE";
+                    break;
+            }    
         }
     }
 }
