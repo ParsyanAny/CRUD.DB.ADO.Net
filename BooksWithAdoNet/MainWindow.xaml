@@ -5,17 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="BookDB"
-        MinHeight="450"
-        MinWidth="769"
+        MaxWidth="800"
+        MinWidth="800"
         MaxHeight="550"
-        MaxWidth="809">
+        MinHeight="550">
     <StackPanel 
-        Background="Ivory"
-            x:Name="Panel">
+        Orientation="Vertical"
+        Background="#FFB49A9A"
+        x:Name="Panel">
         <StackPanel
+            Margin="6,0,6,0"
+            Height="30"
             Orientation="Horizontal">
             <ComboBox x:Name="ComboBox1"
-            Margin="0,0,0,0"
             Background ="#FFD8CCCC"
             Width="110"
             Text="Edit..." 
@@ -32,7 +34,7 @@
             FontSize="13"
             Text="*"
             IsEnabled ="True"
-                     IsReadOnly="False"
+            IsReadOnly="False"
             >
             </TextBox>
             <TextBlock x:Name="TextBlock"
@@ -44,55 +46,88 @@
             <TextBox x:Name="TextBox2"
                Margin="0,0,0,0"
                Background="#FFD8CCCC"
-               Width="479"/>
+               Width="463"/>
             <Button
             Margin="0,0,0,0"
             Width="62"
-            Height="22"
-            Background="AntiqueWhite"
+            Height="30"
+            Background="#FFD8CCCC"
             Foreground="Black"
             Content="Start"
             FontSize="20"
             Padding="-3" Click="Button_Click">
             </Button>
         </StackPanel>
-            <DataGrid 
+        <DataGrid 
         x:Name ="DataGrid"
-            Margin = "0,0,0,0"
-            Background="AntiqueWhite"
-            Foreground="Black" 
+            Margin="6,0,6,0"
+            Background="#FFF0EAEA"
             AutoGenerateColumns="True" 
             VerticalAlignment="Bottom"
-            MinHeight="450"
             IsSynchronizedWithCurrentItem="True"
-            RenderTransformOrigin="0.501,-0.993">
-            </DataGrid>
-        <StackPanel 
-            Orientation="Horizontal">
-            <Label x:Name="ClassicView"
-            Margin="0,0,0,0"
-            Width="100"
-            Content="Classic View"
-            FontSize="14">
+            RenderTransformOrigin="0.501,-0.993"
+            MinHeight="440"
+            ></DataGrid>
+
+        <StackPanel
+            Background="#FFA69B9B"
+            Orientation="Horizontal"
+            VerticalAlignment="Bottom"
+            Margin="0,0,0,0">
+            <Label
+                Margin="0,0,0,0"
+                x:Name="ServerNameLabel"
+                Width="100"
+                Content="Server Name"
+                FontSize="16"
+                FontStyle="Italic">
             </Label>
-            <CheckBox x:Name="ClassicView1"
-            Margin="0,0,0,0"
+            <TextBox
+             x:Name="ServerNameTextBox"
+             Width="90">
+            </TextBox>
+            <Label
+                 x:Name="DataBaseNameLabel"
+                Width="130"
+                Content="DataBase Name"
+                FontSize="16"
+                FontStyle="Italic">
+            </Label>
+            <TextBox
+                x:Name="DataBaseNameTextBox"
+                Width="90">
+            </TextBox>
+            <Button
+                Width="80"
+                Background="#FFB9B2B2"
+                Content="Select"
+                FontSize="20"
+                FontStyle="Italic" Click="Button_Click_1">
+            </Button>
+            <Label x:Name="ClassicView"
+            Margin="45,0,0,0"
+            Width="95"
+            Content="Classic View"
+            FontSize="16"
+            FontStyle="Italic">
+                </Label>
+                <CheckBox x:Name="ClassicView1"
+            Margin="5,0,0,0"
             Width="15"
             Height="15"
             Checked="ClassicView_Click" RenderTransformOrigin="0.468,-0.012"/>
-            <Label x:Name="FullView"
-            Margin="0,0,0,0"
-            Height="25"
-            Width="65"
+                <Label x:Name="FullView"
+            Margin="10,0,0,0"
+            Width="70"
             Content="Full view"
-            FontSize="14" RenderTransformOrigin="-0.78,0.593"  
-               />
-            <CheckBox x:Name="FullView1"
-            Margin="0,0,0,0"
+            FontStyle="Italic"
+            FontSize="16" RenderTransformOrigin="-0.78,0.593"/>
+                <CheckBox x:Name="FullView1"
+            Margin="10,0,0,0"
             Width="15"
             Height="15"
             Checked="FullView_Click">
-            </CheckBox>
+                </CheckBox>
         </StackPanel>
     </StackPanel>
 </Window>
