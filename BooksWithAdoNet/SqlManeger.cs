@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+
 namespace BooksWithAdoNet
 {
     public static class SqlManeger
@@ -20,7 +22,14 @@ namespace BooksWithAdoNet
                 using (var adapter = new SqlDataAdapter())
                 {
                     adapter.SelectCommand = new SqlCommand(query, connection);
-                    adapter.Fill(ds);
+                    try
+                    {
+                         adapter.Fill(ds);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
             return ds;

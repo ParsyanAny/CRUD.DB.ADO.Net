@@ -20,17 +20,20 @@
             Width="110"
             Text="Edit..." 
                 SelectionChanged="ComboBox1_SelectionChanged">
-                <ComboBoxItem x:Name="Select">SELECT</ComboBoxItem>
+                <ComboBoxItem x:Name="select">SELECT</ComboBoxItem>
                 <ComboBoxItem x:Name="insert">INSERT INTO</ComboBoxItem>
                 <ComboBoxItem x:Name="update">UPDATE</ComboBoxItem>
-                <ComboBoxItem x:Name="delate">DELATE FROM</ComboBoxItem>
+                <ComboBoxItem x:Name="delete">DELETE FROM</ComboBoxItem>
             </ComboBox>
-            <TextBox x:Name="TextBox1"
+            <TextBox x:Name="TextBox"
             Margin="0,0,0,0"
             Background="#FFD8CCCC"
             Width="60" 
             FontSize="13"
-            RenderTransformOrigin="-1.84,-0.931">
+            Text="*"
+            IsEnabled ="True"
+                     IsReadOnly="False"
+            >
             </TextBox>
             <TextBlock x:Name="TextBlock"
             Margin="0,0,0,0"
@@ -40,7 +43,7 @@
             </TextBlock>
             <TextBox x:Name="TextBox2"
                Margin="0,0,0,0"
-                     Background="#FFD8CCCC"
+               Background="#FFD8CCCC"
                Width="479"/>
             <Button
             Margin="0,0,0,0"
@@ -59,9 +62,9 @@
             Background="AntiqueWhite"
             Foreground="Black" 
             AutoGenerateColumns="True" 
-            IsSynchronizedWithCurrentItem="True"
-            MinHeight="450"
             VerticalAlignment="Bottom"
+            MinHeight="450"
+            IsSynchronizedWithCurrentItem="True"
             RenderTransformOrigin="0.501,-0.993">
             </DataGrid>
         <StackPanel 
@@ -93,29 +96,3 @@
         </StackPanel>
     </StackPanel>
 </Window>
-<!--VerticalAlignment="Bottom">
-<CheckBox x:Name="ClassicView1"
-            Margin="0,0,500,0"
-            Width="15"
-            Height="15"
-            Checked="ClassicView_Click" RenderTransformOrigin="0.468,-0.012"/>
-<CheckBox x:Name="FullView1"
-            Margin="0,-16,310,0"
-            Width="15"
-            Height="15"
-            Checked="FullView_Click">
-</CheckBox>
-<Label x:Name="ClassicView"
-            Margin="0,-25,620,0"
-            Width="100"
-            Height="25"
-            Content="Classic View"
-            FontSize="14">
-</Label>
-<Label x:Name="FullView"
-            Margin="110,-25,505,0"
-            Height="25"
-            Width="65"
-            Content="Full view"
-            FontSize="14" RenderTransformOrigin="-0.78,0.593"  
-               />-->
