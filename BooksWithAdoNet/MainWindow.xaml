@@ -8,19 +8,19 @@
         MaxWidth="800"
         MinWidth="800"
         MaxHeight="550"
-        MinHeight="550">
+        MinHeight="550"
+        >
     <StackPanel 
         Orientation="Vertical"
-        Background="#FFB49A9A"
+        Background="#FFA69B9B"
         x:Name="Panel">
         <StackPanel
-            Margin="6,0,6,0"
+            Margin="6,0,0,0"
             Height="30"
             Orientation="Horizontal">
             <ComboBox x:Name="ComboBox1"
             Background ="#FFD8CCCC"
             Width="110"
-            Text="Edit..." 
                 SelectionChanged="ComboBox1_SelectionChanged">
                 <ComboBoxItem x:Name="select">SELECT</ComboBoxItem>
                 <ComboBoxItem x:Name="insert">INSERT INTO</ComboBoxItem>
@@ -31,7 +31,9 @@
             Margin="0,0,0,0"
             Background="#FFD8CCCC"
             Width="60" 
-            FontSize="13"
+            FontSize="17"
+            FontStyle="Normal"
+            Padding="2"
             Text="*"
             IsEnabled ="True"
             IsReadOnly="False"
@@ -46,17 +48,18 @@
             <TextBox x:Name="TextBox2"
                Margin="0,0,0,0"
                Background="#FFD8CCCC"
+               FontSize="17"
+               FontStyle="Normal"
+               Padding="2"
                Width="463"/>
             <Button
-            Margin="0,0,0,0"
-            Width="62"
-            Height="30"
+            Width="83"
             Background="#FFD8CCCC"
             Foreground="Black"
             Content="Start"
-            FontSize="20"
-            Padding="-3" Click="Button_Click">
-            </Button>
+            FontStyle="Italic"
+            FontSize="22"
+            Padding="-4" Click="Button_Click" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
         </StackPanel>
         <DataGrid 
         x:Name ="DataGrid"
@@ -84,7 +87,10 @@
             </Label>
             <TextBox
              x:Name="ServerNameTextBox"
-             Width="90">
+             Width="90"
+             FontSize="17"
+             FontStyle="Normal"
+             Padding="2">
             </TextBox>
             <Label
                  x:Name="DataBaseNameLabel"
@@ -95,7 +101,10 @@
             </Label>
             <TextBox
                 x:Name="DataBaseNameTextBox"
-                Width="90">
+                Width="90"
+                FontSize="17"
+             FontStyle="Normal"
+             Padding="2">
             </TextBox>
             <Button
                 Width="80"
@@ -110,24 +119,24 @@
             Content="Classic View"
             FontSize="16"
             FontStyle="Italic">
-                </Label>
-                <CheckBox x:Name="ClassicView1"
+            </Label>
+            <CheckBox x:Name="ClassicView1"
             Margin="5,0,0,0"
             Width="15"
             Height="15"
             Checked="ClassicView_Click" RenderTransformOrigin="0.468,-0.012"/>
-                <Label x:Name="FullView"
+            <Label x:Name="FullView"
             Margin="10,0,0,0"
             Width="70"
             Content="Full view"
             FontStyle="Italic"
             FontSize="16" RenderTransformOrigin="-0.78,0.593"/>
-                <CheckBox x:Name="FullView1"
+            <CheckBox x:Name="FullView1"
             Margin="10,0,0,0"
             Width="15"
             Height="15"
             Checked="FullView_Click">
-                </CheckBox>
+            </CheckBox>
         </StackPanel>
     </StackPanel>
 </Window>

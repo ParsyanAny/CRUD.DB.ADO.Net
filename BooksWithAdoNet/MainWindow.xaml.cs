@@ -72,6 +72,8 @@ namespace BooksWithAdoNet
         {
             string connString = ConnectionString();
             SqlManeger.Execute(connString);
+            ClassicView1.IsChecked = false;
+            FullView1.IsChecked = false;
             DataGrid.Columns.Clear();
             DataGrid.ItemsSource = null;
         }
