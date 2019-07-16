@@ -6,6 +6,7 @@ using System.Windows;
 
     public static class SqlManeger
     {
+    //test
     public static DataTable Execute(string query, string connString)
     {
         var ds = new DataTable();
