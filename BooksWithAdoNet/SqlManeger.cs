@@ -6,9 +6,6 @@ using System.Windows;
 
     public static class SqlManeger
     {
-    //private const string connString = @"Data Source=(local);Initial Catalog=BookDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;Pooling=true";
-    // private const string connString = @"Data Source=(local);Initial Catalog=BookDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;Pooling=true";
-
     public static DataTable Execute(string query, string connString)
     {
         var ds = new DataTable();
