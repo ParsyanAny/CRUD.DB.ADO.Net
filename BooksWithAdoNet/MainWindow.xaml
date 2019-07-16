@@ -9,7 +9,7 @@
         MaxHeight="550"
         MinHeight="550"
         Title="Sql Manger Light"
-        Icon="D:\programs\2.png">
+        Icon="D:\programs\1.png">
     <StackPanel 
         Orientation="Vertical"
         Background="#FFA69B9B"
