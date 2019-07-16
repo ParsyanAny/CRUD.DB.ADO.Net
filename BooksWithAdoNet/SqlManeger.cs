@@ -3,10 +3,8 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows;
-
     public static class SqlManeger
     {
-    //test
     public static DataTable Execute(string query, string connString)
     {
         var ds = new DataTable();
@@ -43,8 +41,7 @@ using System.Windows;
             }
             catch (Exception ex)
             {
-            MessageBox.Show(ex.Message);
-            }    
+                MessageBox.Show(ex.Message);
+            }
+        }   
     }
-}
-

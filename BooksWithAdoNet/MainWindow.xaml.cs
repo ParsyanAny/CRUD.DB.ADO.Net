@@ -13,6 +13,7 @@ namespace BooksWithAdoNet
     public partial class MainWindow : Window
     {
         public MainWindow() => InitializeComponent();
+       
         public string ConnectionString()
             {
                 SqlConnectionStringBuilder connString = new SqlConnectionStringBuilder();
